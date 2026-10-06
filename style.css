@@ -1,0 +1,1303 @@
+
+/* =========================================
+   FASHION HUB JAIPUR
+   Cute, modern, Gen-Z fashion website
+   ========================================= */
+
+
+/* 1. GLOBAL SETTINGS */
+
+:root {
+    --pink: #f6b5ca;
+    --pink-dark: #e77fa3;
+    --pink-light: #fff0f5;
+    --deep: #8d3d5b;
+    --cream: #fffaf7;
+    --peach: #ffdacb;
+    --yellow: #ffe79d;
+    --ink: #30252a;
+    --muted: #796a70;
+    --white: #ffffff;
+    --border: #f3dce4;
+    --shadow: 0 14px 38px rgba(141, 61, 91, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: var(--pink);
+    color: var(--ink);
+}
+
+
+/* 2. REUSABLE BUTTONS */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(141, 61, 91, 0.15);
+}
+
+.button-pink {
+    background: var(--pink-dark);
+    color: var(--white);
+}
+
+.button-light {
+    background: var(--white);
+    color: var(--deep);
+    border: 1px solid var(--border);
+}
+
+.button-dark {
+    background: var(--ink);
+    color: var(--white);
+}
+
+.button-white {
+    background: var(--white);
+    color: var(--deep);
+}
+
+
+/* 3. TOP ANNOUNCEMENT BAR */
+
+.announcement {
+    padding: 9px 16px;
+    background: var(--deep);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.announcement span {
+    color: var(--yellow);
+    margin-left: 8px;
+}
+
+
+/* 4. NAVIGATION */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255, 250, 247, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 49px;
+    height: 49px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.brand-text > span {
+    display: inline;
+    color: var(--pink-dark);
+}
+
+.brand-text small {
+    margin-top: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.54rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 17px;
+    background: var(--pink-light);
+    color: var(--deep);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.nav-button:hover {
+    background: var(--pink);
+}
+
+
+/* 5. HERO SECTION */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 0.88fr;
+    align-items: center;
+    gap: 55px;
+    padding: 70px 8% 85px;
+    min-height: 620px;
+    background:
+        radial-gradient(circle at 85% 20%, #ffe5ed 0, transparent 30%),
+        radial-gradient(circle at 5% 90%, #fff0dc 0, transparent 25%),
+        var(--cream);
+}
+
+.hero-content {
+    max-width: 590px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 17px;
+    color: var(--deep);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1,
+.section-heading h2,
+.about-content h2,
+.price-banner h2,
+.final-cta h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.08;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 6.3vw, 6rem);
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--pink-dark);
+}
+
+.hero-description {
+    max-width: 470px;
+    margin: 22px 0 28px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 29px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.hero-note span {
+    color: var(--pink-dark);
+}
+
+
+/* HERO PHOTO
+   Add your image to images/hero.jpg */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    justify-self: center;
+}
+
+.hero-photo {
+    position: relative;
+    height: 475px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 48% 48% 25px 25px;
+    background: var(--peach);
+    box-shadow: var(--shadow);
+}
+
+.hero-photo img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.photo-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 25px;
+    text-align: center;
+    color: var(--deep);
+    background:
+        radial-gradient(circle at 20% 20%, #fff 0, transparent 25%),
+        linear-gradient(145deg, #ffe8ef, #ffe3d6);
+}
+
+.photo-placeholder span {
+    font-size: 2.2rem;
+}
+
+.photo-placeholder strong {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.photo-placeholder small {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.photo-missing img {
+    display: none;
+}
+
+.photo-missing .photo-placeholder {
+    z-index: 2;
+}
+
+.floating-tag {
+    position: absolute;
+    z-index: 3;
+    padding: 11px 17px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--deep);
+    box-shadow: var(--shadow);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.tag-top {
+    top: 65px;
+    left: -32px;
+    transform: rotate(-8deg);
+}
+
+.tag-bottom {
+    bottom: 75px;
+    right: -28px;
+    transform: rotate(7deg);
+}
+
+.hero-sticker {
+    position: absolute;
+    z-index: 4;
+    top: -20px;
+    right: -12px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--deep);
+    font-size: 0.68rem;
+    font-weight: 900;
+    line-height: 1.3;
+    transform: rotate(10deg);
+}
+
+
+/* 6. BENEFITS STRIP */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 23px 7%;
+    gap: 20px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.benefits > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.benefits span {
+    font-size: 1.35rem;
+    color: var(--pink-dark);
+}
+
+.benefits p {
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+
+/* 7. GENERAL SECTION SETTINGS */
+
+.section-padding {
+    padding: 95px 8%;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 13px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-size: clamp(2.5rem, 4.4vw, 4rem);
+}
+
+.section-heading p {
+    max-width: 530px;
+    margin: 17px auto 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.9;
+}
+
+
+/* 8. COLLECTION / PRODUCT CARDS */
+
+.collection {
+    background: var(--cream);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 24px;
+}
+
+.product-card {
+    min-width: 0;
+    padding: 10px 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0 6px 22px rgba(141, 61, 91, 0.035);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.product-photo {
+    position: relative;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--pink-light);
+}
+
+.product-photo img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-photo img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    z-index: 3;
+    top: 12px;
+    left: 12px;
+    padding: 7px 11px;
+    background: var(--white);
+    border-radius: 999px;
+    color: var(--deep);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.badge-hot {
+    background: var(--yellow);
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 17px 5px 10px;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.product-info p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 0.72rem;
+}
+
+.price {
+    color: var(--deep);
+    font-size: 1.05rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.product-link {
+    display: block;
+    margin: 9px 5px 0;
+    padding: 11px 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--pink-light);
+    color: var(--deep);
+    font-size: 0.76rem;
+    font-weight: 800;
+    transition: 0.2s ease;
+}
+
+.product-link:hover {
+    background: var(--pink);
+}
+
+.collection-note {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.72rem;
+}
+
+
+/* 9. PRICE BANNER */
+
+.price-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 20px;
+    background:
+        radial-gradient(circle at 15% 15%, #fce3eb 0, transparent 30%),
+        linear-gradient(135deg, #ffece5, #ffe0eb);
+    text-align: center;
+}
+
+.price-banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.price-banner-content > span {
+    color: var(--deep);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.price-banner h2 {
+    margin-top: 18px;
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.price-banner h2 span {
+    color: var(--deep);
+}
+
+.price-banner p {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.price-range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin: 27px 0;
+}
+
+.price-range span {
+    color: var(--deep);
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.price-range strong {
+    color: var(--deep);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.decoration-one,
+.decoration-two {
+    position: absolute;
+    color: rgba(141, 61, 91, 0.12);
+    font-size: 9rem;
+}
+
+.decoration-one {
+    top: 5px;
+    left: 8%;
+    transform: rotate(-15deg);
+}
+
+.decoration-two {
+    right: 9%;
+    bottom: 0;
+    transform: rotate(15deg);
+}
+
+
+/* 10. ABOUT SECTION */
+
+.about {
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    align-items: center;
+    gap: 75px;
+    background: var(--cream);
+}
+
+.about-visual {
+    position: relative;
+    width: 100%;
+    max-width: 490px;
+    justify-self: center;
+}
+
+.about-photo {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 25px 25px 110px 25px;
+    background: var(--peach);
+    box-shadow: var(--shadow);
+}
+
+.about-photo img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-sticker {
+    position: absolute;
+    z-index: 3;
+    right: -24px;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--deep);
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 1.5;
+    transform: rotate(8deg);
+}
+
+.about-content .eyebrow {
+    margin-bottom: 15px;
+}
+
+.about-content > p {
+    margin-top: 19px;
+    color: var(--muted);
+    font-size: 0.91rem;
+    line-height: 1.95;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 26px 0;
+}
+
+.about-highlights > div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+}
+
+.about-highlights > div > span {
+    font-size: 1.5rem;
+    color: var(--pink-dark);
+}
+
+.about-highlights p {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.76rem;
+}
+
+.about-highlights small {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 0.65rem;
+}
+
+
+/* 11. VISIT / CONTACT CARDS */
+
+.visit {
+    background: var(--white);
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.visit-card {
+    padding: 30px 24px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--cream);
+    transition: transform 0.25s ease;
+}
+
+.visit-card:hover {
+    transform: translateY(-5px);
+}
+
+.visit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 21px;
+    border-radius: 16px;
+    background: var(--pink-light);
+    color: var(--deep);
+    font-size: 1.7rem;
+}
+
+.visit-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+}
+
+.visit-card p {
+    min-height: 85px;
+    margin: 12px 0 20px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.visit-link {
+    color: var(--deep);
+    font-size: 0.78rem;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+}
+
+.visit-link:hover {
+    color: var(--pink-dark);
+}
+
+
+/* 12. FINAL CALL TO ACTION */
+
+.final-cta {
+    padding: 80px 20px;
+    background: var(--deep);
+    color: var(--white);
+    text-align: center;
+}
+
+.final-cta > span {
+    color: var(--yellow);
+    font-size: 0.73rem;
+    font-weight: 900;
+    letter-spacing: 1.8px;
+}
+
+.final-cta h2 {
+    margin: 19px 0 27px;
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.final-cta .button:hover {
+    color: var(--deep);
+}
+
+
+/* 13. FOOTER */
+
+.footer {
+    padding: 35px 20px;
+    background: #fff6f4;
+    text-align: center;
+}
+
+.footer-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.footer-brand span {
+    color: var(--pink-dark);
+}
+
+.footer > p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: var(--deep);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.footer > small {
+    color: var(--muted);
+    font-size: 0.7rem;
+}
+
+
+/* 14. FLOATING WHATSAPP BUTTON */
+
+.floating-whatsapp {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 17px;
+    border-radius: 999px;
+    background: #248b52;
+    color: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.16);
+    transition: transform 0.2s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+.floating-whatsapp span {
+    font-size: 1.2rem;
+}
+
+.floating-whatsapp small {
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+
+/* 15. TABLET RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 14px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+        gap: 30px;
+    }
+
+    .hero-photo {
+        height: 420px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 16. MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 760px) {
+
+    .announcement {
+        font-size: 0.68rem;
+        padding: 9px 10px;
+    }
+
+    .announcement span {
+        display: block;
+        margin-left: 0;
+    }
+
+    .navbar {
+        min-height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .brand-text {
+        font-size: 1.25rem;
+    }
+
+    .logo-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 9px;
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .nav-button {
+        padding: 10px 13px;
+        font-size: 0.7rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 55px 7% 70px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 13vw, 5rem);
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.92rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-note {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 85%;
+        max-width: 400px;
+    }
+
+    .hero-photo {
+        height: 420px;
+    }
+
+    .tag-top {
+        left: -20px;
+    }
+
+    .tag-bottom {
+        right: -20px;
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 10px;
+        padding: 25px 5%;
+    }
+
+    .benefits > div {
+        justify-content: flex-start;
+    }
+
+    .benefits p {
+        font-size: 0.72rem;
+    }
+
+    .section-padding {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: clamp(2.6rem, 10vw, 3.6rem);
+    }
+
+    .product-grid {
+        gap: 17px;
+    }
+
+    .product-card {
+        padding: 7px 7px 13px;
+        border-radius: 15px;
+    }
+
+    .product-photo {
+        height: 250px;
+        border-radius: 11px;
+    }
+
+    .product-info {
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px 4px 8px;
+    }
+
+    .product-info h3 {
+        font-size: 0.98rem;
+    }
+
+    .product-info p {
+        font-size: 0.68rem;
+    }
+
+    .price {
+        font-size: 0.95rem;
+    }
+
+    .product-badge {
+        top: 7px;
+        left: 7px;
+        padding: 6px 8px;
+        font-size: 0.53rem;
+    }
+
+    .product-link {
+        margin: 5px 2px 0;
+        padding: 10px 5px;
+        font-size: 0.66rem;
+    }
+
+    .price-banner {
+        padding: 70px 20px;
+    }
+
+    .price-banner h2 {
+        font-size: 3.5rem;
+    }
+
+    .decoration-one,
+    .decoration-two {
+        font-size: 5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-visual {
+        width: 88%;
+    }
+
+    .about-photo {
+        height: 400px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content > p {
+        font-size: 0.86rem;
+    }
+
+    .about-highlights {
+        text-align: left;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .visit-card {
+        padding: 25px;
+    }
+
+    .visit-card p {
+        min-height: 0;
+    }
+
+    .final-cta {
+        padding: 65px 20px;
+    }
+
+    .final-cta h2 {
+        font-size: 3.6rem;
+    }
+
+}
+
+
+/* 17. SMALL PHONES */
+
+@media (max-width: 420px) {
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .brand-text {
+        font-size: 1.08rem;
+    }
+
+    .brand-text small {
+        font-size: 0.46rem;
+        letter-spacing: 0.8px;
+    }
+
+    .nav-button {
+        padding: 9px 10px;
+        font-size: 0.65rem;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 0.72rem;
+    }
+
+    .hero-photo {
+        height: 350px;
+    }
+
+    .hero-sticker {
+        width: 72px;
+        height: 72px;
+        font-size: 0.58rem;
+        right: -8px;
+    }
+
+    .floating-tag {
+        font-size: 0.63rem;
+        padding: 9px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-photo {
+        height: 195px;
+    }
+
+    .product-info h3 {
+        font-size: 0.86rem;
+    }
+
+    .product-info p {
+        font-size: 0.62rem;
+    }
+
+    .product-link {
+        font-size: 0.61rem;
+    }
+
+    .about-photo {
+        height: 330px;
+    }
+
+    .about-sticker {
+        width: 95px;
+        height: 95px;
+        right: -15px;
+        font-size: 0.65rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 11px 13px;
+    }
+
+}
+
+
+/* 18. ACCESSIBILITY: REDUCE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
